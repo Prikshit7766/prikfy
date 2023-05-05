@@ -6,7 +6,7 @@ ensure==1.0.2  # to check whether the argument which is passed is correct or not
 # dev requirements -
 pytest==7.3.1  # for testing
 tox==4.5.1
-black==23.3.0 # for formatting
+black==22.8.0 # for formatting
 flake8==6.0.0 # for linting (find out if there is an error)
 mypy==1.2.0  # for checking type error
 -e .
