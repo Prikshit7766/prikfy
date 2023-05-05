@@ -10,7 +10,7 @@ AUTHOR_USER_NAME = "Prikshit7766"
 SRC_REPO="priky"
 AUTHOR_EMAIL = "prikshitsharma8024@gmail.com"
 
-setuptools.setupt(name=SRC_REPO, 
+setuptools.setup(name=SRC_REPO, 
                   version=__version__,
                   author=AUTHOR_USER_NAME,
                   author_email=AUTHOR_EMAIL,

@@ -1,13 +1,12 @@
 [build-system]
-require=    ["setuptools>=42.0", "wheel"]
-build-backend="setuptools.build_meta"
+requires = ['setuptools>=42.0', "wheel"]
+build-backend = "setuptools.build_meta"
 
 [tool.pytest.ini_options]
-testpaths=[
-    "test"
-]
-
+testpaths = [
+    "tests"
+    ]
 
 [tool.mypy]
 mypy_path = "src"
-ignore_missing_imports = True
+ignore_missing_imports = true
