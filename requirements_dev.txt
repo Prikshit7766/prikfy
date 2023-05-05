@@ -1,12 +1,12 @@
-ipywidgets==8.0.2
-notebook==6.4.12
+ipywidgets==8.0.6
+notebook==6.5.4
 ensure==1.0.2
 
 
 # dev requirements -
-pytest==7.1.3
-tox==3.25.1
-black==22.8.0 # code formatter
+pytest==7.3.1
+tox==4.5.1
+black==23.3.0 # code formatter
 flake8==5.0.4 # linter
-mypy==0.971 # check type errors
+mypy==1.2.0 # check type errors
 -e .
