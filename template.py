@@ -19,9 +19,9 @@ logging.info(f"Creating Project name: {project_name}")
 list_of_files = [
     ".github/workflows/.gitkeep",   # dummpy file t does not do anything (used to keep your structure intact on github) 
    f"src/{project_name}/__init__.py",  # keeping my source code in src folder
-   f"test/__init__.py",
-   f"test/unit/__init__.py",
-   f"test/integration/__init__.py",
+   f"tests/__init__.py",
+   f"tests/unit/__init__.py",
+   f"tests/integration/__init__.py",
     "init_setup.sh", # this file will be used to install all the dependencies (that is conda env setup)
     "requirements.txt", 
     "requirements_dev.txt", # only used for testing (keeping main requirements.txt clean)
