@@ -7,7 +7,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "prikfy"
 AUTHOR_USER_NAME = "Prikshit7766"
-SRC_REPO="priky"
+SRC_REPO="prikfy"
 AUTHOR_EMAIL = "prikshitsharma8024@gmail.com"
 
 setuptools.setup(name=SRC_REPO, 
