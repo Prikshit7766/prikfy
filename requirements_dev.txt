@@ -1,0 +1,11 @@
+ipywidgets
+notebook
+ensure
+
+
+# dev requirements
+pytest
+tox
+black # code formatter
+flake8 # linter
+mypy  # check type errors
