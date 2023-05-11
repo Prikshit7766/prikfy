@@ -36,3 +36,5 @@ def test_negative_decimal_numbers():
 
 def test_zero():
     assert number_to_words(0) == "zero"
+
+
