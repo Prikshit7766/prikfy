@@ -1,8 +1,8 @@
 from IPython import display  
 import sys
 from ensure import ensure_annotations 
-from src.prikfy.custom_exception import Custom_Exception
-from src.prikfy.logger import logger
+from prikfy.custom_exception import Custom_Exception
+from prikfy.logger import logger
 
 
 ONES = [
