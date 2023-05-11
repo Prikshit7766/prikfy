@@ -1,8 +1,8 @@
 from IPython import display  
 import sys
 from ensure import ensure_annotations 
-from src.prikfy.custom_exception import CustomException
-from src.prikfy.logger import logger
+# from src.prikfy.custom_exception import CustomException
+# from src.prikfy.logger import logger
 
 
 ONES = [
@@ -23,7 +23,7 @@ THOUSANDS = [
 
 
 def convert_whole_number(number):
-    try:
+    # try:
         if number == 0:
             return ""
 
@@ -59,12 +59,12 @@ def convert_whole_number(number):
             group_count += 1
 
         return words.strip()
-    except Exception as e:
-        logger.error(f"Error occurred while converting number to words: {e}")
-        raise CustomException(e, sys)
+    # except Exception as e:
+    #     logger.error(f"Error occurred while converting number to words: {e}")
+    #     raise CustomException(e, sys)
 
 def convert_decimal(decimal):
-    try:
+    # try:
         words = ""
         for digit in decimal:
             if digit == '0':
@@ -73,13 +73,13 @@ def convert_decimal(decimal):
                 words += ONES[int(digit)] + " "
 
         return words.strip()
-    except Exception as e:
-        logger.error(f"Error occurred while converting number to words: {e}")
-        raise CustomException(e, sys)
+    # except Exception as e:
+    #     logger.error(f"Error occurred while converting number to words: {e}")
+    #     raise CustomException(e, sys)
 
 
 def number_to_words(number):
-    try:
+    # try:
         if not isinstance(number, (int, float)):
             return number  # Return the original value if not a valid number
 
@@ -97,9 +97,9 @@ def number_to_words(number):
             words = convert_whole_number(int(number_str))
 
         return words
-    except Exception as e:
-        logger.error(f"Error occurred while converting number to words: {e}")
-        raise CustomException(e, sys)
+    # except Exception as e:
+    #     logger.error(f"Error occurred while converting number to words: {e}")
+    #     raise CustomException(e, sys)
 
 
 
