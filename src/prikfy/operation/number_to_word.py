@@ -2,7 +2,7 @@ from IPython import display
 from ensure import ensure_annotations 
 from prikfy.custom_exception import CustomException
 from prikfy.logger import logger
-
+import sys
 
 ONES = [
     "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
@@ -60,7 +60,7 @@ def convert_whole_number(number):
         return words.strip()
     except Exception as e:
         logger.error(f"Error occurred while converting number to words: {e}")
-        raise CustomException(e)
+        raise CustomException(e,sys)
 
 def convert_decimal(decimal):
     try:
@@ -74,13 +74,13 @@ def convert_decimal(decimal):
         return words.strip()
     except Exception as e:
         logger.error(f"Error occurred while converting number to words: {e}")
-        raise CustomException(e)
+        raise CustomException(e,sys)
 
 
 def number_to_words(number):
     try:
-        if not isinstance(number, (int, float)):
-            return number  # Return the original value if not a valid number
+        # if not isinstance(number, (int, float)):
+        #     return number  # Return the original value if not a valid number
 
         if number == 0:
             return "zero"
@@ -98,4 +98,4 @@ def number_to_words(number):
         return words
     except Exception as e:
         logger.error(f"Error occurred while converting number to words: {e}")
-        raise CustomException(e)
+        raise CustomException(e,sys)
