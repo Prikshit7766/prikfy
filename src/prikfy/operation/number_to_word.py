@@ -1,7 +1,7 @@
 from IPython import display  
 import sys
 from ensure import ensure_annotations 
-from prikfy.custom_exception import Custom_Exception
+from prikfy.custom_exception import CustomException
 from prikfy.logger import logger
 
 
@@ -61,8 +61,7 @@ def convert_whole_number(number):
         return words.strip()
     except Exception as e:
         logger.error(f"Error occurred while converting number to words: {e}")
-        raise Custom_Exception(sys.exc_info()) from e
-
+        raise CustomException(e, sys)
 
 def convert_decimal(decimal):
     try:
@@ -76,8 +75,7 @@ def convert_decimal(decimal):
         return words.strip()
     except Exception as e:
         logger.error(f"Error occurred while converting number to words: {e}")
-        raise Custom_Exception(sys.exc_info()) from e
-
+        raise CustomException(e, sys)
 
 
 def number_to_words(number):
@@ -101,8 +99,7 @@ def number_to_words(number):
         return words
     except Exception as e:
         logger.error(f"Error occurred while converting number to words: {e}")
-        raise Custom_Exception(sys.exc_info()) from e
-
+        raise CustomException(e, sys)
 
 
 
