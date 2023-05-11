@@ -99,8 +99,3 @@ def number_to_words(number):
     except Exception as e:
         logger.error(f"Error occurred while converting number to words: {e}")
         raise CustomException(e)
-
-
-
-
-
