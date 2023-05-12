@@ -62,9 +62,19 @@ currency_symbols = {
 
 
 
-# Define the word lists for numbers, tens, and scales (powers of 1000).
-ones = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten',
-        'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen']
-tens = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety']
-scales = ['', 'Thousand', 'Million', 'Billion', 'Trillion', 'Quadrillion', 'Quintillion', 'Sextillion',
-         'Septillion', 'Octillion', 'Nonillion', 'Decillion', 'Undecillion', 'Duodecillion', 'Tredecillion']
+# Define the word lists for numbers, tens, and THOUSANDS
+ONES = [
+    "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+    "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
+]
+
+TENS = [
+    "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"
+]
+
+THOUSANDS = [
+    "", "thousand", "million", "billion", "trillion", "quadrillion", "quintillion", "sextillion",
+    "septillion", "octillion", "nonillion", "decillion", "undecillion", "duodecillion", "tredecillion",
+    "quattuordecillion", "quindecillion", "sexdecillion", "septendecillion", "octodecillion",
+    "novemdecillion", "vigintillion"
+]
