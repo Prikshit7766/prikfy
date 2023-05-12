@@ -1,23 +1,10 @@
 from IPython import display  
 from ensure import ensure_annotations 
-from prikfy.custom_exception import CustomException
-from prikfy.logger import logger
+from prikfy.custom_exception import  CustomException
+from prikfy.config import ONES, TENS, THOUSANDS
+from prikfy.logger import logging
+import sys
 
-ONES = [
-    "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
-    "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
-]
-
-TENS = [
-    "", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"
-]
-
-THOUSANDS = [
-    "", "thousand", "million", "billion", "trillion", "quadrillion", "quintillion", "sextillion",
-    "septillion", "octillion", "nonillion", "decillion", "undecillion", "duodecillion", "tredecillion",
-    "quattuordecillion", "quindecillion", "sexdecillion", "septendecillion", "octodecillion",
-    "novemdecillion", "vigintillion"
-]
 
 
 def convert_whole_number(number):
@@ -58,8 +45,8 @@ def convert_whole_number(number):
 
         return words.strip()
     except Exception as e:
-        logger.error(f"Error occurred while converting number to words: {e}")
-        raise CustomException(e)
+        logging.error(f"Error occurred while converting number to words: {e}")
+        raise CustomException(str(e))
 
 def convert_decimal(decimal):
     try:
@@ -72,8 +59,8 @@ def convert_decimal(decimal):
 
         return words.strip()
     except Exception as e:
-        logger.error(f"Error occurred while converting number to words: {e}")
-        raise CustomException(e)
+        logging.error(f"Error occurred while converting number to words: {e}")
+        raise CustomException(str(e))
 
 
 def number_to_words(number):
@@ -96,5 +83,5 @@ def number_to_words(number):
 
         return words
     except Exception as e:
-        logger.error(f"Error occurred while converting number to words: {e}")
-        raise CustomException(e)
+        logging.error(f"Error occurred while converting number to words: {e}")
+        raise CustomException(str(e))
