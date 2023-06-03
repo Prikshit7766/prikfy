@@ -14,8 +14,9 @@ To use the number-to-word conversion function from Prikfy, follow these steps:
 1. Import the `number_to_word` function from `prikfy.operation.number_to_word`.
 
 ```python
-from prikfy.operation.number_to_word import number_to_word
-result = number_to_word(1234)
+from prikfy.transform import UnitTransform
+unit=UnitTransform()
+result = unit.number_to_word(1234)
 print(result)
 ```
 

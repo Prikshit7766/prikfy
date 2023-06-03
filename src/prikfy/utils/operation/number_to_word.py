@@ -1,8 +1,8 @@
 from IPython import display
 from ensure import ensure_annotations
-from ..custom_exception import CustomException
-from ..utils.data import (ONES, TENS, THOUSANDS)
-from ..logger import logging
+from ...custom_exception import CustomException
+from ..data import (ONES, TENS, THOUSANDS)
+from ...logger import logging
 import sys
 
 
