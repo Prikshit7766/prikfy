@@ -7,8 +7,12 @@ class UnitTransform:
         pass
 
     def number_to_word(self, value):
-        # Call the number_to_word function from prikfy.operation.number_to_word
-        return number_to_word(value)
+        try:
+            # Call the number_to_word function from prikfy.operation.number_to_word
+            return number_to_word(value)
+        except Exception as e:
+            print("Warning: Error occurred while converting number to words. Returning original value.")
+            return value
  
 
 
