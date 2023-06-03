@@ -1,10 +1,9 @@
-from IPython import display  
-from ensure import ensure_annotations 
-from prikfy.custom_exception import  CustomException
+from IPython import display
+from ensure import ensure_annotations
+from prikfy.custom_exception import CustomException
 from prikfy.config import ONES, TENS, THOUSANDS
 from prikfy.logger import logging
 import sys
-
 
 
 def convert_whole_number(number):
@@ -48,11 +47,12 @@ def convert_whole_number(number):
         logging.error(f"Error occurred while converting number to words: {e}")
         raise CustomException(str(e))
 
+
 def convert_decimal(decimal):
     try:
         words = ""
         for digit in decimal:
-            if digit == '0':
+            if digit == "0":
                 words += "zero "
             else:
                 words += ONES[int(digit)] + " "
@@ -75,9 +75,13 @@ def number_to_words(number):
             return "minus " + number_to_words(abs(number))
 
         number_str = str(number)
-        if '.' in number_str:
-            whole_part, decimal_part = number_str.split('.')
-            words = number_to_words(int(whole_part)) + " point " + convert_decimal(decimal_part)
+        if "." in number_str:
+            whole_part, decimal_part = number_str.split(".")
+            words = (
+                number_to_words(int(whole_part))
+                + " point "
+                + convert_decimal(decimal_part)
+            )
         else:
             words = convert_whole_number(int(number_str))
 
