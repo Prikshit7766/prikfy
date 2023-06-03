@@ -1,12 +1,12 @@
 from IPython import display
 from ensure import ensure_annotations
-from prikfy.custom_exception import CustomException
-from prikfy.config import ONES, TENS, THOUSANDS
-from prikfy.logger import logging
+from ..custom_exception import CustomException
+from ..utils.data import (ONES, TENS, THOUSANDS)
+from ..logger import logging
 import sys
 
 
-def convert_whole_number(number):
+def convert_whole_number(number: int) -> str:
     try:
         if number == 0:
             return ""
@@ -48,7 +48,7 @@ def convert_whole_number(number):
         raise CustomException(str(e))
 
 
-def convert_decimal(decimal):
+def convert_decimal_number(decimal):
     try:
         words = ""
         for digit in decimal:
@@ -62,8 +62,8 @@ def convert_decimal(decimal):
         logging.error(f"Error occurred while converting number to words: {e}")
         raise CustomException(str(e))
 
-
-def number_to_words(number):
+@ensure_annotations
+def number_to_word(number) -> str:
     try:
         # if not isinstance(number, (int, float)):
         #     return number  # Return the original value if not a valid number
@@ -72,15 +72,15 @@ def number_to_words(number):
             return "zero"
 
         if number < 0:
-            return "minus " + number_to_words(abs(number))
+            return "minus " + number_to_word(abs(number))
 
         number_str = str(number)
         if "." in number_str:
             whole_part, decimal_part = number_str.split(".")
             words = (
-                number_to_words(int(whole_part))
+                number_to_word(int(whole_part))
                 + " point "
-                + convert_decimal(decimal_part)
+                + convert_decimal_number(decimal_part)
             )
         else:
             words = convert_whole_number(int(number_str))
