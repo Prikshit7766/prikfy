@@ -1,5 +1,4 @@
 from IPython import display
-from ensure import ensure_annotations
 from ...custom_exception import CustomException
 from ..data import (ONES, TENS, THOUSANDS)
 from ...logger import logging
@@ -62,7 +61,7 @@ def convert_decimal_number(decimal):
         logging.error(f"Error occurred while converting number to words: {e}")
         raise CustomException(str(e))
 
-@ensure_annotations
+
 def number_to_word(number) -> str:
     try:
         # if not isinstance(number, (int, float)):
