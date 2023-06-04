@@ -1,6 +1,6 @@
 # Prikfy Library
 
-Prikfy is a Python library that provides a function for converting numbers into their word representation.
+Prikfy is a Python library designed for small transformation operations. This is the first release of Prikfy, created as a learning project.
 
 ## Installation
 
