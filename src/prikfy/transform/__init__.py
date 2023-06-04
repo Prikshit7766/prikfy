@@ -1,4 +1,5 @@
 from ..utils.operation.number_to_word import number_to_word
+from ..utils.operation.convert_abbreviation import convert_abbreviation
 
 
 class UnitTransform:
@@ -13,6 +14,16 @@ class UnitTransform:
         except Exception as e:
             print("Warning: Error occurred while converting number to words. Returning original value.")
             return value
+class CommonAbbreviations:
+    def __init__(self):
+        pass
+
+    def convert_abbreviation(self, value) :
+        #try:
+            return convert_abbreviation(value)
+        #except:
+         #   print("Warning: An error has been encountered while converting abbrevation. Returning original value")
+         #   return value
  
 
 

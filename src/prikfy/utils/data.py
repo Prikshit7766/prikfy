@@ -60,6 +60,18 @@ currency_symbols = {
         'Ƀ': 'Bitcoin'
     }
 
+abbreviations = {
+        'ASAP': 'As Soon As Possible',
+        'FAQ': 'Frequently Asked Questions',
+        'RSVP': "Répondez s'il vous plaît",
+        'CEO': 'Chief Executive Officer',
+        'HTML': 'HyperText Markup Language',
+        'NASA': 'National Aeronautics and Space Administration',
+        'WiFi': 'Wireless Fidelity',
+        'DIY': 'Do It Yourself',
+        'ATM': 'Automated Teller Machine',
+        'GPS': 'Global Positioning System'
+}
 
 
 # Define the word lists for numbers, tens, and THOUSANDS
