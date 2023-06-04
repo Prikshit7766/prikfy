@@ -11,7 +11,7 @@ def sym_to_name(symbol: str) -> str:
     returns None. The function uses sym_cnt_dict dictionary, located in
     data.py file.
 
-    The file was downloaded from:
+    The original csv file based on which {country_symbol: country_name} dictionary in data.py file was created, was downloaded from:
     https://pkgstore.datahub.io/core/country-list/data_csv/data/d7c9d7cfb42cb69f4422dec222dbbaa8/data_csv.csv
     """
     if not isinstance(symbol, str):
