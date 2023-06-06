@@ -1,7 +1,6 @@
 from IPython import display
 from ...custom_exception import CustomException
 from ..data import (ONES, TENS, THOUSANDS)
-from ...logger import logging
 import sys
 
 
@@ -43,7 +42,6 @@ def convert_whole_number(number: int) -> str:
 
         return words.strip()
     except Exception as e:
-        logging.error(f"Error occurred while converting number to words: {e}")
         raise CustomException(str(e))
 
 
@@ -58,7 +56,6 @@ def convert_decimal_number(decimal):
 
         return words.strip()
     except Exception as e:
-        logging.error(f"Error occurred while converting number to words: {e}")
         raise CustomException(str(e))
 
 
@@ -86,5 +83,4 @@ def number_to_word(number) -> str:
 
         return words
     except Exception as e:
-        logging.error(f"Error occurred while converting number to words: {e}")
         raise CustomException(str(e))
