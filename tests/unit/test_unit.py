@@ -1,4 +1,5 @@
 import pytest
+import unittest
 from prikfy.transform import UnitTransform
 unit=UnitTransform()
 
@@ -39,3 +40,19 @@ def test_zero():
     assert unit.number_to_word(0) == "zero"
     
 
+
+def test_get_symbols_by_name():
+    assert unit.get_currency_symbols_by_name("Leke") == ['Lek']
+    assert unit.get_currency_symbols_by_name("Colón") == ['₡']
+    
+
+def test_get_names_by_symbol():
+    assert unit.get_currency_names_by_symbol('Lek') == ['Leke']
+    assert unit.get_currency_names_by_symbol('$') == ['Dollars', 'Pesos', 'Colones', 'Zimbabwean dollar']
+
+def test_get_codes_by_symbol():
+    assert unit.get_currency_codes_by_symbol('Lek') == ['ALL']
+    assert unit.get_currency_codes_by_symbol('₡') == ["CRC"]
+
+def test_get_info_by_symbol():
+    assert unit.get_currency_info_by_symbol('$') == [('Dollars', 'USD'), ('Pesos', 'ARS'), ('Dollars', 'AUD'), ('Dollars', 'BSD'), ('Dollars', 'BBD'), ('Dollars', 'BMD'), ('Dollars', 'BND'), ('Dollars', 'CAD'), ('Dollars', 'KYD'), ('Pesos', 'CLP'), ('Pesos', 'COP'), ('Dollars', 'XCD'), ('Colones', 'SVC'), ('Dollars', 'FJD'), ('Dollars', 'GYD'), ('Dollars', 'HKD'), ('Dollars', 'LRD'), ('Pesos', 'MXN'), ('Dollars', 'NAD'), ('Dollars', 'NZD'), ('Dollars', 'SGD'), ('Dollars', 'SBD'), ('Dollars', 'SRD'), ('Dollars', 'TVD'), ('Zimbabwean dollar', 'ZWL')]
