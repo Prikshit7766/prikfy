@@ -56,3 +56,42 @@ def test_get_codes_by_symbol():
 
 def test_get_info_by_symbol():
     assert unit.get_currency_info_by_symbol('$') == [('Dollars', 'USD'), ('Pesos', 'ARS'), ('Dollars', 'AUD'), ('Dollars', 'BSD'), ('Dollars', 'BBD'), ('Dollars', 'BMD'), ('Dollars', 'BND'), ('Dollars', 'CAD'), ('Dollars', 'KYD'), ('Pesos', 'CLP'), ('Pesos', 'COP'), ('Dollars', 'XCD'), ('Colones', 'SVC'), ('Dollars', 'FJD'), ('Dollars', 'GYD'), ('Dollars', 'HKD'), ('Dollars', 'LRD'), ('Pesos', 'MXN'), ('Dollars', 'NAD'), ('Dollars', 'NZD'), ('Dollars', 'SGD'), ('Dollars', 'SBD'), ('Dollars', 'SRD'), ('Dollars', 'TVD'), ('Zimbabwean dollar', 'ZWL')]
+
+def test_get_country_codes_by_name():
+    assert unit.get_country_codes_by_name("India") == {
+        "Alpha-2 code": "IN",
+        "Alpha-3 code": "IND"
+    }
+    assert unit.get_country_codes_by_name("United States of America") == {
+        "Alpha-2 code": "US",
+        "Alpha-3 code": "USA"
+    }
+    assert unit.get_country_codes_by_name("Canada") == {
+        "Alpha-2 code": "CA",
+        "Alpha-3 code": "CAN"
+    }
+    # Add more test cases for different country names and their expected codes
+
+def test_get_alpha2_by_country():
+    assert unit.get_alpha2_by_country("India") == "IN"
+    assert unit.get_alpha2_by_country("United States of America") == "US"
+    assert unit.get_alpha2_by_country("Canada") == "CA"
+    # Add more test cases for different country names and their expected Alpha-2 codes
+
+def test_get_alpha3_by_country():
+    assert unit.get_alpha3_by_country("India") == "IND"
+    assert unit.get_alpha3_by_country("United States of America") == "USA"
+    assert unit.get_alpha3_by_country("Canada") == "CAN"
+    # Add more test cases for different country names and their expected Alpha-3 codes
+
+def test_get_country_by_alpha2():
+    assert unit.get_country_by_alpha2("IN") == "India"
+    assert unit.get_country_by_alpha2("US") == "United States of America"
+    assert unit.get_country_by_alpha2("CA") == "Canada"
+    # Add more test cases for different Alpha-2 codes and their expected country names
+
+def test_get_country_by_alpha3():
+    assert unit.get_country_by_alpha3("IND") == "India"
+    assert unit.get_country_by_alpha3("USA") == "United States of America"
+    assert unit.get_country_by_alpha3("CAN") == "Canada"
+    # Add more test cases for different Alpha-3 codes and their expected country names

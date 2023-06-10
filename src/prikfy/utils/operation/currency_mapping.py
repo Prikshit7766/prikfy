@@ -2,7 +2,7 @@ from ..data import currency_data
 from ...custom_exception import CustomException
 
 
-def get_symbols_by_name(currency_name):
+def get_currency_symbols_by_name(currency_name):
     """Get currency symbols by currency name.
 
     Args:
@@ -19,7 +19,7 @@ def get_symbols_by_name(currency_name):
     return symbols
 
 
-def get_names_by_symbol(currency_symbol):
+def get_currency_names_by_symbol(currency_symbol):
     """Get currency names by currency symbol.
 
     Args:
@@ -37,7 +37,7 @@ def get_names_by_symbol(currency_symbol):
     return names
 
 
-def get_codes_by_symbol(currency_symbol):
+def get_currency_codes_by_symbol(currency_symbol):
     """Get currency codes by currency symbol.
 
     Args:
@@ -55,7 +55,7 @@ def get_codes_by_symbol(currency_symbol):
     return codes
 
 
-def get_info_by_symbol(currency_symbol):
+def get_currency_info_by_symbol(currency_symbol):
     """Get currency information by currency symbol.
 
     Args:
